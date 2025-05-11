@@ -1,0 +1,36 @@
+name: liziwen_reason3d
+description: 8nodes * 8gpu task
+workspace: Production
+project: 4dgs
+max_restarts: 0
+bind_mounts:
+  - host_path: /share/workspaces/liziwen
+    container_path: /workspace
+  - host_path: /share/workspaces/liziwen/miniconda3/envs
+    container_path: /opt/conda/envs 
+  - host_path: /share/workspaces/liziwen
+    container_path: /root
+  - container_path: /datasets
+    host_path: /share/datasets
+    propagation: rprivate
+    read_only: True
+environment:
+  force_pull_image: false
+  image: docker.ai2rob.com:3443/ai2robo/determined-custom:cuda-11.7-pytorch-2.0-gpu-0.24.0
+  registry_auth:
+    password: docker#AI2Robo
+    serveraddress: docker.ai2rob.com:3443
+    username: docker
+resources:
+  slots_per_trial: 8
+  max_slots: 8
+  shm_size: 274877906944 # 256G
+  resource_pool: a100-40g-pcie
+  weight: 2500
+searcher:
+  name: single
+  metric: validation_loss
+  max_length:
+      batches: 117  #60,000 training images with batch size 512 (batch size 64 per GPU)
+  smaller_is_better: true
+entrypoint: bash start.sh

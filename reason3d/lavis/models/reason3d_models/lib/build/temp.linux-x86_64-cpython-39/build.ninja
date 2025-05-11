@@ -1,0 +1,39 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /usr/local/cuda/bin/nvcc
+
+cflags = -pthread -B /opt/conda/envs/spatial/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /opt/conda/envs/spatial/include -I/opt/conda/envs/spatial/include -fPIC -O2 -isystem /opt/conda/envs/spatial/include -fPIC -DWITH_CUDA -I/usr/include -I/usr/include/google -I/usr/include/sparsehash -I/opt/conda/envs/spatial/lib/python3.9/site-packages/torch/include -I/opt/conda/envs/spatial/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -I/usr/local/cuda/include -I/opt/conda/envs/spatial/include/python3.9 -c
+post_cflags = -g -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=pointgroup_ops_ext -D_GLIBCXX_USE_CXX11_ABI=1 -std=c++17
+cuda_cflags = -DWITH_CUDA -I/usr/include -I/usr/include/google -I/usr/include/sparsehash -I/opt/conda/envs/spatial/lib/python3.9/site-packages/torch/include -I/opt/conda/envs/spatial/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -I/usr/local/cuda/include -I/opt/conda/envs/spatial/include/python3.9 -c
+cuda_post_cflags = -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=pointgroup_ops_ext -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_80,code=compute_80 -gencode=arch=compute_80,code=sm_80 -std=c++17
+cuda_dlink_post_cflags = 
+sycl_dlink_post_cflags = 
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  depfile = $out.d
+  deps = gcc
+  command = $nvcc --generate-dependencies-with-compile --dependency-output $out.d $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+
+
+
+
+
+
+build /root/spatial/Reason3D/lavis/models/reason3d_models/lib/build/temp.linux-x86_64-cpython-39/pointgroup_ops/src/cuda.o: cuda_compile /root/spatial/Reason3D/lavis/models/reason3d_models/lib/pointgroup_ops/src/cuda.cu
+build /root/spatial/Reason3D/lavis/models/reason3d_models/lib/build/temp.linux-x86_64-cpython-39/pointgroup_ops/src/pointgroup_ops.o: compile /root/spatial/Reason3D/lavis/models/reason3d_models/lib/pointgroup_ops/src/pointgroup_ops.cpp
+build /root/spatial/Reason3D/lavis/models/reason3d_models/lib/build/temp.linux-x86_64-cpython-39/pointgroup_ops/src/pointgroup_ops_api.o: compile /root/spatial/Reason3D/lavis/models/reason3d_models/lib/pointgroup_ops/src/pointgroup_ops_api.cpp
+
+
+
+
+
+
+
+

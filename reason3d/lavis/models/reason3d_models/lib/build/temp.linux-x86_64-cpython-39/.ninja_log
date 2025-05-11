@@ -1,0 +1,6 @@
+# ninja log v5
+13	63663	1746468422299559814	/root/spatial/Reason3D/lavis/models/reason3d_models/lib/build/temp.linux-x86_64-cpython-39/pointgroup_ops/src/pointgroup_ops.o	8fe1db3d5cf40a4c
+13	70087	1746468423185595379	/root/spatial/Reason3D/lavis/models/reason3d_models/lib/build/temp.linux-x86_64-cpython-39/pointgroup_ops/src/pointgroup_ops_api.o	fd78e642c6ad9571
+5744	68576	1746468882980438508	/root/spatial/Reason3D/lavis/models/reason3d_models/lib/build/temp.linux-x86_64-cpython-39/pointgroup_ops/src/pointgroup_ops.o	967db1c0be9ec383
+5744	68871	1746468883320151655	/root/spatial/Reason3D/lavis/models/reason3d_models/lib/build/temp.linux-x86_64-cpython-39/pointgroup_ops/src/pointgroup_ops_api.o	45183996edd5f0a7
+5744	100745	1746468915181707272	/root/spatial/Reason3D/lavis/models/reason3d_models/lib/build/temp.linux-x86_64-cpython-39/pointgroup_ops/src/cuda.o	2330baa2e2ef5f80
