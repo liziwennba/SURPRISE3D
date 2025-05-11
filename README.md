@@ -1,4 +1,4 @@
 # SUPRISE
 Official repository of SUPRISE: It is not yet decided.
 ## [Project page](https://mbzuai-liziwen.github.io/Scan-Spatial/)
-We modify the source code of multiple methods to support them running on our proposed dataset, you may find modified versions [here](./Models). 
+We modified the code obtained from [Intent3D](https://github.com/WeitaiKang/Intent3D) and [Reason3D](https://github.com/KuanchihHuang/Reason3D), we thank their dedicated efforts in their impressives works. You may find modified versions [here](./Models). 
