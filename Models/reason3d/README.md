@@ -145,19 +145,6 @@ python visualize.py --idx <sample_index> --result_dir <results_directory>
 <img src="figs/visualization.jpg" alt="vis" style="zoom:50%;" />
 
 
-## TODO List
-
-- [x] Release the initial code for 3D referring segmentation task.
-- [X] Release final version paper.
-- [X] Release the dataset and code for 3D reasoning segmentation task.
-- [ ] Release hierarchical mask decoder code. 
-- [ ] Release demo and visualization code.
-- [ ] ...
-
-## Acknowlegment
-
-Our codes are mainly based on [LAVIS](https://github.com/salesforce/LAVIS), [3D-LLM](https://github.com/UMass-Foundation-Model/3D-LLM) and [3D-STMN](https://github.com/sosppxo/3D-STMN). Thanks for their contributions!
-
 
 ## Citation
 
