@@ -16,16 +16,6 @@
 
 </div>
 
-## 🔥 Update
-- 2025/01/19:  Initial code for 3D referring segmentation has been released.
-- 2025/04/05:  Code and dataset for 3D reasoning segmentation has been released.
-
-## Overview
-
-<img src="figs/reason3d_arch.jpg" alt="vis" style="zoom:50%;" />
-
-We introduce Reason3D, a novel LLM for comprehensive 3D understanding that processes point cloud data and text prompts to produce textual responses and segmentation masks. This enables advanced tasks such as 3D reasoning segmentation, hierarchical searching, referring expressions, and question answering with detailed mask outputs.
-
 ## Installation
 
 1. Create conda environment. We use `python=3.8` `pytorch=1.11.0` and `cuda=11.3`.
