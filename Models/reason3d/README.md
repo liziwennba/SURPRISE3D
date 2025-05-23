@@ -55,19 +55,19 @@ python setup.py develop
 
 ## Data Preparation
 
-### ScanNet v2 dataset
+### ScanNet++ Dataset
 
-Download the [ScanNet](http://www.scan-net.org/) v2 dataset.
+Download the [ScanNet++] (https://github.com/scannetpp/scannetpp) dataset.
 
-Put the downloaded `scans` folder as follows.
+Put the downloaded scenes as follows.
 ```
-Reason3D
+datasets
 ├── data
-│   ├── scannetv2
-│   │   ├── scans
+│   ├── 0a5c013435
+│   ├── 0a7cc12c0e
 ```
 
-Split and preprocess point cloud data for 3D referring and 3D reasoning segmentation tasks:
+Follow [ScanNet++] (https://github.com/scannetpp/scannetpp) to Prepare 3D Semantics Training Data:
 
 ```
 cd data/scannetv2
