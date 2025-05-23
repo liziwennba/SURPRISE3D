@@ -65,15 +65,12 @@ datasets
 ├── data
 │   ├── 0a5c013435
 │   ├── 0a7cc12c0e
+│   ├── ...
+├── metadata
+├── splits
 ```
 
-Follow [ScanNet++] (https://github.com/scannetpp/scannetpp) to Prepare 3D Semantics Training Data:
-
-```
-cd data/scannetv2
-bash prepare_data.sh #Scanrefer
-bash prepare_data_reason.sh #Reason3D
-```
+Follow [ScanNet++] (https://github.com/scannetpp/scannetpp) to Prepare 3D Semantics Training Data. To ensure all categories are included, replace the original instance_class.txt file with the one we provide:
 
 After running the script, the scannetv2 dataset structure should look like below.
 ```
