@@ -70,24 +70,30 @@ datasets
 ├── splits
 ```
 
-Follow [ScanNet++] (https://github.com/scannetpp/scannetpp) to Prepare 3D Semantics Training Data. To ensure all categories are included, replace the original instance_class.txt file with the one we provide:
+Follow [ScanNet++] (https://github.com/scannetpp/scannetpp) to Prepare 3D Semantics Training Data, you have to modify the semantic/configs/prepare_training_data.yml. To ensure all categories are included, replace the original instance_class.txt file with the one we provide:
+```
+cd /your_path_to_scannetpp/scannetpp
+python -m semantic.prep.prepare_training_data semantic/configs/prepare_training_data.yml
+```
 
 After running the script, the scannetv2 dataset structure should look like below.
 ```
-Reason3D
+datasets
 ├── data
-│   ├── scannetv2
-│   │   ├── scans
-│   │   ├── train
-│   │   │   ├──XXX_refer.pth
-│   │   │   ├──XXX_reason.pth
-│   │   ├── val
+│   ├── 0a5c013435
+│   ├── 0a7cc12c0e
+│   ├── ...
+├── metadata
+├── splits
+├── processed
+│   ├── 0a5c013435.pth
+│   ├── 0a7cc12c0e.pth
+│   ├── ...
 ```
-You can directly download our preprocessed data ([train.zip](https://drive.google.com/file/d/1Y41Y6H0To9qB71kUlLISYn4RhvwFe4KZ/view) and [val.zip](https://drive.google.com/file/d/1y9MSXFGh80W46201bbgCoW95go5DJY7k/view)), please agree the official license before download it.
 
-### ScanRefer dataset
+### Surprise3D dataset
 
-Download [ScanRefer](https://github.com/daveredrum/ScanRefer) annotations.
+Download [Surprise3D]https://huggingface.co/datasets/hhllzz/surprise-3d annotations.
 
 ```
 Reason3D
@@ -95,51 +101,6 @@ Reason3D
 │   ├── ScanRefer
 │   │   ├── ScanRefer_filtered_train.json
 │   │   ├── ScanRefer_filtered_val.json
-```
-
-### Matterport3D dataset
-
-Please follow the instructions [here](https://niessner.github.io/Matterport/) to access official `download_mp.py` script, run the following in `data/matterport/`:
-```
-python2 download_mp.py -o . --type region_segmentations
-```
-Extract files and organize data as follows:
-```
-Reason3D
-├── data
-│   ├── matterport
-│   │   ├── scans
-│   │   │   ├── 17DRP5sb8fy
-│   │   │   │   ├──region_segmentations
-│   │   │   │   │   ├──region0.ply
-│   │   │   ├── ...
-```
-Process data on Matterport3D dataset for 3D reasoning segmentation task:
-```
-cd data/matterport
-python3 process_mp3d.py
-```
-After running the script, the Matterport3D dataset structure should look like below.
-```
-Reason3D
-├── data
-│   ├── matterport
-│   │   ├── mp3d_data
-│   │   │   ├── XXXXX_regionX.pth
-│   │   │   ├── ...
-```
-You can directly download our preprocessed data ([mp3d_data.zip](https://drive.google.com/file/d/1OXT_hmv-9eHgqpcl3A0V28y-DfC5v0-y/view)), please agree the official license before download it.
-
-### Reason3D dataset
-
-Download our Reason3D annotations [here](https://drive.google.com/file/d/1Z4kzr_4oJxTJgzILaycDuHlRYeZCXOu6/view).
-
-```
-Reason3D
-├── data
-│   ├── reason3d
-│   │   ├── reason3d_train.json
-│   │   ├── reason3d_val.json
 ```
 
 ## Pretrained Backbone
