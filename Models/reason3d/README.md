@@ -96,11 +96,10 @@ datasets
 Download [Surprise3D]https://huggingface.co/datasets/hhllzz/surprise-3d annotations.
 
 ```
-Reason3D
+datasets
 ├── data
-│   ├── ScanRefer
-│   │   ├── ScanRefer_filtered_train.json
-│   │   ├── ScanRefer_filtered_val.json
+│   ├── surprise-3d-train.json
+│   ├── surprise-3d-val.json
 ```
 
 ## Pretrained Backbone
