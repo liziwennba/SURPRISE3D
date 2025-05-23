@@ -101,36 +101,20 @@ mv ${Download_PATH}/sp_unet_backbone.pth checkpoints/
 You can also pretrain the backbone by yourself and modify the path [here](lavis/projects/reason3d/train/reason3d_scanrefer_scratch.yaml#L15).
 
 ## Training
-- **3D referring segmentation:** Train on ScanRefer dataset from scratch:
+- **3D reasoning segmentation:** Train on Surprise3D dataset from scratch:
 ```
 python -m torch.distributed.run --nproc_per_node=4 --master_port=29501 train.py --cfg-path lavis/projects/reason3d/train/reason3d_scanrefer_scratch.yaml
 ```
-- **3D reasoning segmentation:** Train on Reason3D dataset using the pretrained checkpoint from the 3D referring segmentation model:
-```
-python -m torch.distributed.run --nproc_per_node=2 --master_port=29501 train.py --cfg-path lavis/projects/reason3d/train/reason3d_reason.yaml --options model.pretrained=<path_to_pretrained_checkpoint>
-```
-Replace `<path_to_pretrained_checkpoint>` with the path to your pretrained 3D referring segmentation model. For example: `./lavis/output/reason3d/xxxx/checkpoint_xx.pth`
-
 
 ## Evaluation
-- **3D referring segmentation:** Evaluate on ScanRefer dataset: 
+- **3D reasoning segmentation:** Evaluate on Surprise3D dataset: 
 ```
 python evaluate.py --cfg-path lavis/projects/reason3d/val/reason3d_scanrefer_scratch.yaml --options model.pretrained=<path_to_pretrained_checkpoint> run.save_results=True
 ```
 Note: this repo currently only supports batch size = 1 for inference. 
 
-- **3D reasoning segmentation:** Evaluate on our Reason3D dataset: 
-```
-python evaluate.py --cfg-path lavis/projects/reason3d/val/reason3d_reason.yaml --options model.pretrained=<path_to_pretrained_checkpoint> run.save_results=True
-```
 Add `run.save_results=True` option if you want to save prediction results.
 
-We provide a pre-trained [checkpoint](https://drive.google.com/file/d/1FEKy5uu70Z3S5GCDjnt8VX8cXB1m9eVx/view?usp=sharing) for 3D Reasoning segmentation task. See the below table to check the performance.
-
-|                   |      Sample Number | mIoU      | Acc50     | Acc25     |
-| ----------------- |  ----------------- | --------- | --------- | --------- |
-| ScanNet           |          308       |   0.32    |    0.32   |   0.44     |
-| Matterport3D      |          837       |   0.22    |    0.21   |   0.33     | 
 
 ## Visualization
 
