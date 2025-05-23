@@ -66,7 +66,7 @@ cd /your_path_to_scannetpp/scannetpp
 python -m semantic.prep.prepare_training_data semantic/configs/prepare_training_data.yml
 ```
 
-After running the script, the scannetv2 dataset structure should look like below.
+After running the script, the scannet++ dataset structure should look like below.
 ```
 datasets
 ├── data
@@ -80,7 +80,16 @@ datasets
 │   ├── 0a7cc12c0e.pth
 │   ├── ...
 ```
+Follow [UniDet3D] (https://github.com/filaPro/unidet3d/) to generate superpoints. You can also use other methods to generate superpoint on your own.
+```
+cd /your_path_to_UniDet3D/UniDet3D/data/scannetpp
+python preprocess_raw_data.py --path_to_data path_to_dataset --output_dir path_to_save_preprocessed_raw_data
+```
 
+Add superpoints to pth file.
+```
+python update_superpoints.py --pth_dir datasets/data/processed --scene_dir path_to_save_preprocessed_raw_data
+```
 ### Surprise3D dataset
 
 Download [Surprise3D]https://huggingface.co/datasets/hhllzz/surprise-3d annotations.
