@@ -140,11 +140,6 @@ python visualize.py --idx <sample_index> --result_dir <results_directory>
 ```
 `<sample_index>`: Index of the sample you wish to display. `<results_directory>`: Path to either the `reason_preds` or `refer_preds` directory containing the results.
 
-## Results
-
-<img src="figs/visualization.jpg" alt="vis" style="zoom:50%;" />
-
-
 
 ## Citation
 
