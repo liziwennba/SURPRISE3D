@@ -96,9 +96,8 @@ Download [Surprise3D]https://huggingface.co/datasets/hhllzz/surprise-3d annotati
 
 ```
 datasets
-├── data
-│   ├── surprise-3d-train.json
-│   ├── surprise-3d-val.json
+├── surprise-3d-train.json
+├── surprise-3d-val.json
 ```
 
 ## Pretrained Backbone
