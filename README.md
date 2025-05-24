@@ -1,4 +1,4 @@
-# [Surprise3D]
+# [Surprise3D: A Dataset for Spatial Understanding and Reasoning in Complex 3D Scenes]
 [![Project Page](https://img.shields.io/badge/Project-Page-green)](https://mbzuai-liziwen.github.io/Surprise3D/)
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-red)](https://arxiv.org/abs/your_arxiv_id)
 
