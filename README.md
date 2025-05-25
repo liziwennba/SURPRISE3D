@@ -52,7 +52,7 @@ You can download the **Surprise3D annotation data** from Hugging Face using the 
 
 ---
 
-## ⚙️ Reason3D Code Modifications
+## ⚙️ Train and Evaluation
 
 We have modified parts of the **Reason3D** codebase to support training and testing on our **Surprise3D** dataset. These modifications enable the preprocessing of **ScanNet++** data and the use of **Reason3D** for segmentation tasks on **Surprise3D**.
 
