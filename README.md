@@ -36,9 +36,9 @@ Surprise3D covers a wide range of **spatial reasoning skills**, including:
 </p>
 
 We provide a detailed analysis of the dataset:
-1. **Distribution of Question Types**: Visualizing the proportion of questions across various reasoning categories.
-2. **Augmentation for Low-Frequency Objects**: Boosting the number of questions targeting rarely occurring objects to improve model robustness.
-3. **Object Frequency (%) by Question Type (Top 15 Objects)**: Examining how frequently the top 15 objects are referenced across different question types.
+1. **Augmentation for Low-Frequency Objects**: Boosting the number of questions targeting rarely occurring objects to improve model robustness.
+2. **Object Frequency (%) by Question Type (Top 15 Objects)**: Examining how frequently the top 15 objects are referenced across different question types.
+3. **Distribution of Question Types**: Visualizing the proportion of questions across various reasoning categories.
 
 Our dataset ensures a balanced distribution of reasoning types and incorporates augmentation techniques to reduce biases caused by object frequency disparities. This analysis supports the development of models that generalize better across diverse reasoning tasks.
 
