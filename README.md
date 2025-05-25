@@ -30,19 +30,4 @@ Surprise3D covers a wide range of **spatial reasoning skills**, including:
 - **Absolute distance reasoning** (e.g., "Identify the object exactly 3 meters in front of you.").
 ---
 
----
-## 🔍 Data Analysis
-
-<p align="center">
-    <img src="assets/data_analysis.png" alt="Data Analysis" width="800" />
-</p>
-
-We provide a detailed analysis of the dataset:
-1. **Distribution of Question Types**: Visualizing the proportion of questions across various reasoning categories.
-2. **Augmentation for Low-Frequency Objects**: Boosting the number of questions targeting rarely occurring objects to improve model robustness.
-3. **Object Frequency (%) by Question Type (Top 15 Objects)**: Examining how frequently the top 15 objects are referenced across different question types.
-
-Our dataset ensures a balanced distribution of reasoning types and incorporates augmentation techniques to reduce biases caused by object frequency disparities. This analysis supports the development of models that generalize better across diverse reasoning tasks.
-
----
 We modified the code obtained from [Intent3D](https://github.com/WeitaiKang/Intent3D) and [Reason3D](https://github.com/KuanchihHuang/Reason3D) to support running on our proposed dataset, we thank their dedicated efforts in their impressives works. You may find modified versions [here](./Models). 
