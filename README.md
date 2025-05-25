@@ -4,7 +4,9 @@
 
 ---
 ## 🌟 Overview
-[Surprise3D Overview](assets/task.png)
+<p align="center">
+    <img src="assets/task.png" alt="overview" width="800" />
+</p>
 **Surprise3D** is a novel dataset designed to evaluate **language-guided spatial reasoning understanding** in complex 3D scenes. Unlike existing datasets that often mix semantic cues (e.g., object names) with spatial context, **Surprise3D** emphasizes **spatial reasoning** by crafting queries that exclude object names, thus mitigating shortcut biases.
 The dataset includes:
 - **200k+ vision-language pairs** across **900+ indoor scenes** from **ScanNet++**.
