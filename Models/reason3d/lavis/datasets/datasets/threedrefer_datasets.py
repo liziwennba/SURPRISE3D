@@ -16,18 +16,18 @@ from PIL import Image
 from PIL import ImageFile
 import torch_scatter
 from typing import Dict, Sequence, Tuple, Union
-
+import tracemalloc
 from lavis.datasets.datasets.base_dataset import BaseDataset
 import glob
 import random
 
 class ThreeDReferDataset(BaseDataset):
-    def __init__(self, text_processor, pts_root, ann_paths):
+    def __init__(self, text_processor, pts_root, ann_paths,question_type):
         """
         vis_root (string): Root directory of images (e.g. coco/images/)
         ann_root (string): directory to store the annotation file
         """
-        super().__init__(text_processor, pts_root, ann_paths)
+        super().__init__(text_processor, pts_root, ann_paths,question_type)
         self.scene_ids = {}
         n = 0
         self.use_xyz = True
@@ -50,13 +50,14 @@ class ThreeDReferDataset(BaseDataset):
             self.training = False
         self.with_label = True
 
+        self.question_type = question_type
         self.annotation = new_annotation
         self.sp_filenames = self.get_sp_filenames()
         self.short_question_list = QUESTION_LIST
         self.answer_list = ANSWER_LIST
         self.with_elastic = False
         self.aug = True      
-
+        self.data_cache = {}
     def get_sp_filenames(self):
         #print(self.pts_root)
         filenames = glob.glob(osp.join(self.pts_root, 'scannetpp', '*' + '.pth'))
@@ -69,9 +70,13 @@ class ThreeDReferDataset(BaseDataset):
             #print(filename)
             data = torch.load(filename,weights_only=False)
             xyz, rgb, superpoint, semantic_label, instance_label = data['sampled_coords'],data['sampled_colors'],data['superpoints'],data['sampled_labels'],data['sampled_instance_anno_id']
+            rgb = rgb / 0.5 - 1
+            xyz = xyz[:, :3] - xyz[:, :3].mean(0)
             return xyz, rgb, superpoint, semantic_label, instance_label
         else:
             xyz, rgb, superpoint = torch.load(filename)
+            rgb = rgb / 0.5 - 1
+            xyz = xyz[:, :3] - xyz[:, :3].mean(0)
             dummy_sem_label = np.zeros(xyz.shape[0], dtype=np.float32)
             dummy_inst_label = np.zeros(xyz.shape[0], dtype=np.float32)
             return xyz, rgb, superpoint, dummy_sem_label, dummy_inst_label
@@ -205,6 +210,12 @@ class ThreeDReferDataset(BaseDataset):
                 break
         #print(scan_id)
         data = self.load(sp_filename)
+        # if sp_filename in self.data_cache:
+        #     data = self.data_cache[sp_filename]
+        # else:
+        #     data = self.load(sp_filename)
+        #     if len(self.data_cache) < 50:
+        #         self.data_cache[sp_filename] = data
         data = self.transform_train(*data) if self.training else self.transform_test(*data)
         xyz, xyz_middle, rgb, superpoint, semantic_label, instance_label = data
 
@@ -212,6 +223,8 @@ class ThreeDReferDataset(BaseDataset):
         coord_float = torch.from_numpy(xyz_middle).float()
         feat = torch.from_numpy(rgb).float()
         superpoint = torch.from_numpy(superpoint)
+        #print(coord.shape)
+        #print(superpoint.unique().max())
         semantic_label = torch.from_numpy(semantic_label).long()
         instance_label = torch.from_numpy(instance_label).long()
         #print(object_id)
@@ -228,7 +241,6 @@ class ThreeDReferDataset(BaseDataset):
         #     exit()
 
         assert gt_pmask.int().max() == 1
-
         return {
             'ann_ids': ann_id,
             'scan_ids': scan_id,

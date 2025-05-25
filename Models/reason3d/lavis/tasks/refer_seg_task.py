@@ -90,7 +90,7 @@ class ThreeDReferSegTask(BaseTask):
         spiou = get_iou(pred_spmask, gt_spmask, pred_confidence = model.pred_confidence)
         pred_pmask = pred_spmask[samples["superpoints"]]
         piou = get_iou(pred_pmask, gt_pmask, pred_confidence = model.pred_confidence)
-        print('saving results')
+        #print('saving results')
         #if 'scene0011_00' == samples["scan_ids"][0] or 'scene0011_01' == samples["scan_ids"][0]:
         #os.makedirs(f'result/{self.num}',exist_ok  = True)
         #np.save(f'result/{self.num}/pred.npy',pred_pmask.cpu().numpy(),)
