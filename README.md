@@ -28,6 +28,6 @@ Surprise3D covers a wide range of **spatial reasoning skills**, including:
 - **Narrative perspective** (e.g., "Locate the object visible from the sofa."),
 - **Parametric perspective** (e.g., "Select the object 2 meters to the left of the table."),
 - **Absolute distance reasoning** (e.g., "Identify the object exactly 3 meters in front of you.").
----
+
 
 We modified the code obtained from [Intent3D](https://github.com/WeitaiKang/Intent3D) and [Reason3D](https://github.com/KuanchihHuang/Reason3D) to support running on our proposed dataset, we thank their dedicated efforts in their impressives works. You may find modified versions [here](./Models). 
