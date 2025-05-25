@@ -65,5 +65,3 @@ These updates allow us to leverage the powerful capabilities of **Reason3D** whi
 We thank the authors of **[Reason3D](https://github.com/KuanchihHuang/Reason3D)** for their outstanding work, which served as the foundation for our modifications.
 
 ---
-
-We modified the code obtained from [Intent3D](https://github.com/WeitaiKang/Intent3D) and [Reason3D](https://github.com/KuanchihHuang/Reason3D) to support running on our proposed dataset, we thank their dedicated efforts in their impressives works. You may find modified versions [here](./Models). 
