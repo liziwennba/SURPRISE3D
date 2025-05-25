@@ -58,7 +58,7 @@ We have modified parts of the **Reason3D** codebase to support training and test
 
 ### Steps:
 1. **Preprocessing ScanNet++ Data**:
-   - Please refer to the directory **[models/reason3d](./models/reason3d)** for scripts to preprocess the **ScanNet++** data required for the **Surprise3D** dataset.
+   - Please refer to **[here](./Models/reason3d)** for scripts to preprocess the **ScanNet++** data required for the **Surprise3D** dataset.
 
 2. **Training and Testing on Surprise3D**:
    - The modified Reason3D code in `models/reason3d` supports training and testing on the **Surprise3D** annotations.
