@@ -30,6 +30,7 @@ Surprise3D covers a wide range of **spatial reasoning skills**, including:
 - **Parametric perspective** (e.g., "Select the object 2 meters to the left of the table."),
 - **Absolute distance reasoning** (e.g., "Identify the object exactly 3 meters in front of you.").
 ---
+
 ---
 ## 🔍 Data Analysis
 
