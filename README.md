@@ -4,15 +4,12 @@
 
 <h2><a href="https://arxiv.org/abs/your_arxiv_id">Surprise3D: A Dataset for Spatial Understanding and Reasoning in Complex 3D Scenes</a></h2>
 
-[Ziwen Li](https://github.com/liziwennba/)<sup>1*</sup>, [Hanlve Zhang](https://scholar.google.com/citations?user=example)<sup>1*</sup>, [Jiaxin Huang](https://scholar.google.com/citations?user=example)<sup>1</sup>, [Yu-Shen Liu](https://yushen-liu.github.io/)<sup>2</sup>, [Tiejun Huang](https://scholar.google.com/citations?user=knvEK4AAAAAJ&hl=en)<sup>1,3</sup>, [Xinlong Wang](https://www.xloong.wang/)<sup>1</sup>
+iaxin Huang, Ziwen Li, Hanlve Zhang
  
-<sup>1</sup>[BAAI](https://www.baai.ac.cn/english.html), <sup>2</sup>[THU](https://www.tsinghua.edu.cn/en/), <sup>3</sup>[PKU](https://english.pku.edu.cn/) <br><sup>*</sup> Equal Contribution
- 
-CVPR 2025 (Highlight)
+MBZUAI
 
 [[Project Page](https://img.shields.io/badge/Project-Page-green)](https://mbzuai-liziwen.github.io/Surprise3D/)
 [[arXiv](https://img.shields.io/badge/arXiv-Paper-red)](https://arxiv.org/abs/your_arxiv_id)
-[[PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/surprise3d-a-dataset-for-spatial/3d-visual-grounding)](https://paperswithcode.com/sota/3d-visual-grounding?p=surprise3d-a-dataset-for-spatial)
 
 </div>
 
