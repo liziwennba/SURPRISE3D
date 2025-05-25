@@ -56,7 +56,7 @@ You can download the **Surprise3D annotation data** from Hugging Face using the 
 
 We have modified parts of the **Reason3D** codebase to support training and testing on our **Surprise3D** dataset. These modifications enable the preprocessing of **ScanNet++** data and the use of **Reason3D** for segmentation tasks on **Surprise3D**.
 
-   - Please refer to **[here](./Models/reason3d)** for scripts to preprocess the **ScanNet++** data required for the **Surprise3D** dataset and training and evaluation for reason3D.
+   - Please refer to **[here](./Models/reason3d)** for scripts to preprocess the **ScanNet++** data required for the **Surprise3D** dataset and training and evaluation for **Reason3D**.
 
 These updates allow us to leverage the powerful capabilities of **Reason3D** while ensuring compatibility with the unique structure and annotations of **Surprise3D**.
 
