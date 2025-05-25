@@ -3,7 +3,6 @@
 <div align='center'>
 
 <h2><a href="https://arxiv.org/abs/your_arxiv_id">Surprise3D: A Dataset for Spatial Understanding and Reasoning in Complex 3D Scenes</a></h2>
-
 Jiaxin Huang, Ziwen Li, Hanlue Zhang
  
 MBZUAI
