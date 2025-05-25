@@ -44,4 +44,10 @@ Our dataset ensures a balanced distribution of reasoning types and incorporates 
 
 ---
 
+## 📥 Download Annotations
+
+You can download the **Surprise3D annotation data** from Hugging Face using the following link:
+
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Dataset-blue)](https://huggingface.co/datasets/hhllzz/surprise-3d)
+
 We modified the code obtained from [Intent3D](https://github.com/WeitaiKang/Intent3D) and [Reason3D](https://github.com/KuanchihHuang/Reason3D) to support running on our proposed dataset, we thank their dedicated efforts in their impressives works. You may find modified versions [here](./Models). 
