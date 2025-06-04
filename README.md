@@ -6,7 +6,6 @@ Jiaxin Huang, Ziwen Li, Hanlue Zhang
  
 MBZUAI
 
-[![Project Page](https://img.shields.io/badge/Project-Page-green)](https://mbzuai-liziwen.github.io/Surprise3D/)
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-red)](https://arxiv.org/abs/your_arxiv_id)
 
 </div>
