@@ -63,14 +63,3 @@ These updates allow us to leverage the powerful capabilities of **Reason3D** whi
 ---
 
 We thank the authors of **[Reason3D](https://github.com/KuanchihHuang/Reason3D)** for their outstanding work, which served as the foundation for our modifications.
-
----
-## 📄 Citation
-
-If you find this project useful in your research, please consider citing:
-
-```bibtex
-
-```
-
----
