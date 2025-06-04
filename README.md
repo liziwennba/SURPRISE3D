@@ -6,8 +6,6 @@ Jiaxin Huang, Ziwen Li, Hanlue Zhang
  
 MBZUAI
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-red)](https://arxiv.org/abs/your_arxiv_id)
-
 </div>
 
 <p align="center">
