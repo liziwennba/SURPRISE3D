@@ -5,7 +5,7 @@
 
 Jiaxin Huang, Ziwen Li, Hanlue Zhang, Runnan Chen, Zhengqing Gao, Xiao He, Yandong Guo, Wenping Wang, Tongliang Liu, Mingming Gong
  
-MBZUAI
+MBZUAI, AI2Robotics
 
 </div>
 
