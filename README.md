@@ -1,6 +1,9 @@
 
 <div align='center'>
-
+<!-- MBZUAI logo -->
+<p align="center">
+    <img src="assets/logo.png" alt="MBZUAI Logo" width="120" />
+</p>
 <h2><a href="https://arxiv.org/abs/2507.07781">Surprise3D: A Dataset for Spatial Understanding and Reasoning in Complex 3D Scenes</a></h2>
 
 Jiaxin Huang, Ziwen Li, Hanlue Zhang, Runnan Chen, Zhengqing Gao, Xiao He, Yandong Guo, Wenping Wang, Tongliang Liu, Mingming Gong
