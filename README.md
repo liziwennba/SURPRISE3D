@@ -5,7 +5,7 @@
 
 Jiaxin Huang, Ziwen Li, Hanlue Zhang, Runnan Chen, Zhengqing Gao, Xiao He, Yandong Guo, Wenping Wang, Tongliang Liu, Mingming Gong
  
-MBZUAI, AI2Robotics
+MBZUAI, AI2Robotics, Texas A&M University, TML lab, The University of Sydney, The University of Melbourne
 <p align="center">
     <img src="assets/MBZUAI.png" alt="MBZUAI Logo" width="120" style="margin:0 10px;"/>
     <img src="assets/ai2robotics.png" alt="AI2Robotics Logo" width="120" style="margin:0 10px;"/>
