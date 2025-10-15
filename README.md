@@ -10,7 +10,7 @@ MBZUAI, AI2Robotics, Texas A&M University, TML lab, The University of Sydney, Th
     <img src="assets/MBZUAI.png" alt="MBZUAI Logo" width="120" style="margin:0 10px;"/>
     <img src="assets/ai2robotics.png" alt="AI2Robotics Logo" width="120" style="margin:0 10px;"/>
     <img src="assets/texasa&muniversity.jpg" alt="texas a&m university Logo" width="120" style="margin:0 10px;"/>
-    <img src="assets/Melbourne.png" alt="The university of Melbourne Logo" width="120" style="margin:0 10px;"/>
+    <img src="assets/Melbourne.png" alt="The university of Melbourne Logo" width="60" style="margin:0 10px;"/>
     <img src="assets/sydney.jpg" alt="The university of sydney Logo" width="120" style="margin:0 10px;"/>
     <img src="assets/TMlab.jpg" alt="TM lab Logo" width="120" style="margin:0 10px;"/>
 </p>
