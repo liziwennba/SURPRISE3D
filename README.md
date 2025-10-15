@@ -15,6 +15,8 @@ MBZUAI, AI2Robotics, Texas A&M University, TML lab, The University of Sydney, Th
     <img src="assets/TMlab.jpg" alt="TM lab Logo" width="120" style="margin:0 10px;"/>
 </p>
 
+---
+
 We introduce **Surprise3D**, a novel dataset designed to evaluate **language-guided spatial reasoning segmentation** in complex 3D scenes. Unlike existing datasets that often mix semantic cues (e.g., object names) with spatial context, **Surprise3D** emphasizes **spatial reasoning** by crafting queries that exclude object names, thus mitigating shortcut biases.
 
 The dataset includes:
