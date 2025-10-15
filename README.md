@@ -6,14 +6,13 @@
 Jiaxin Huang, Ziwen Li, Hanlue Zhang, Runnan Chen, Zhengqing Gao, Xiao He, Yandong Guo, Wenping Wang, Tongliang Liu, Mingming Gong
  
 MBZUAI, AI2Robotics
-<!-- MBZUAI logo -->
 <p align="center">
-    <img src="assets/logo.png" alt="MBZUAI Logo" width="120" />
-</p>
-</div>
-
-<p align="center">
-    <img src="assets/task.png" alt="overview" width="800" />
+    <img src="assets/MBZUAI.png" alt="MBZUAI Logo" width="120" style="margin:0 10px;"/>
+    <img src="assets/ai2robotics.png" alt="AI2Robotics Logo" width="120" style="margin:0 10px;"/>
+    <img src="assets/texas a&m university.png" alt="texas a&m university Logo" width="120" style="margin:0 10px;"/>
+    <img src="assets/The university of Melbourne.png" alt="The university of Melbourne Logo" width="120" style="margin:0 10px;"/>
+    <img src="assets/The university of sydney.png" alt="The university of sydney Logo" width="120" style="margin:0 10px;"/>
+    <img src="assets/TM lab.png" alt="TM lab Logo" width="120" style="margin:0 10px;"/>
 </p>
 
 We introduce **Surprise3D**, a novel dataset designed to evaluate **language-guided spatial reasoning segmentation** in complex 3D scenes. Unlike existing datasets that often mix semantic cues (e.g., object names) with spatial context, **Surprise3D** emphasizes **spatial reasoning** by crafting queries that exclude object names, thus mitigating shortcut biases.
