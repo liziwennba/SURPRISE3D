@@ -9,9 +9,9 @@ MBZUAI, AI2Robotics
 <p align="center">
     <img src="assets/MBZUAI.png" alt="MBZUAI Logo" width="120" style="margin:0 10px;"/>
     <img src="assets/ai2robotics.png" alt="AI2Robotics Logo" width="120" style="margin:0 10px;"/>
-    <img src="assets/texas a&m university.png" alt="texas a&m university Logo" width="120" style="margin:0 10px;"/>
-    <img src="assets/The university of Melbourne.png" alt="The university of Melbourne Logo" width="120" style="margin:0 10px;"/>
-    <img src="assets/The university of sydney.png" alt="The university of sydney Logo" width="120" style="margin:0 10px;"/>
+    <img src="assets/texasa&muniversity.png" alt="texas a&m university Logo" width="120" style="margin:0 10px;"/>
+    <img src="assets/Melbourne.png" alt="The university of Melbourne Logo" width="120" style="margin:0 10px;"/>
+    <img src="assets/sydney.png" alt="The university of sydney Logo" width="120" style="margin:0 10px;"/>
     <img src="assets/TM lab.png" alt="TM lab Logo" width="120" style="margin:0 10px;"/>
 </p>
 
